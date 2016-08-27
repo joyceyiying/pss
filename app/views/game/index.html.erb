@@ -1,0 +1,36 @@
+<h1>Hello World! </h1>
+<h1>Let's play :)  </h1>
+<h1><%= @input%></h1>  
+<a href="?pss=paper">paper</a>
+<a href="?pss=sissor">sissor</a>
+<a href="?pss=stone">stone</a>
+<h1><%= @computer%></h1>
+
+<h1><%= @win_lose%></h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Computer</th>
+      <th>Player</th>
+      <th>Win lose</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @psses.each do |pss| %>
+      <tr>
+        <td><%= pss.computer %></td>
+        <td><%= pss.player %></td>
+        <td><%= pss.win_lose %></td>
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<% if @final_score %>
+<h1><%= @final_score%></h1>
+<img src="<%= @final_icon %>" />
+<% end %>

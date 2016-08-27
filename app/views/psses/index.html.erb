@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Psses</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Computer</th>
+      <th>Player</th>
+      <th>Win lose</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @psses.each do |pss| %>
+      <tr>
+        <td><%= pss.computer %></td>
+        <td><%= pss.player %></td>
+        <td><%= pss.win_lose %></td>
+        <td><%= link_to 'Show', pss %></td>
+        <td><%= link_to 'Edit', edit_pss_path(pss) %></td>
+        <td><%= link_to 'Destroy', pss, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pss', new_pss_path %>

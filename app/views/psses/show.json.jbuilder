@@ -1,0 +1,1 @@
+json.partial! "psses/pss", pss: @pss

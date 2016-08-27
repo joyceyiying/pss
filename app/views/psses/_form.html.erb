@@ -1,0 +1,32 @@
+<%= form_for(pss) do |f| %>
+  <% if pss.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(pss.errors.count, "error") %> prohibited this pss from being saved:</h2>
+
+      <ul>
+      <% pss.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :computer %>
+    <%= f.text_field :computer %>
+  </div>
+
+  <div class="field">
+    <%= f.label :player %>
+    <%= f.text_field :player %>
+  </div>
+
+  <div class="field">
+    <%= f.label :win_lose %>
+    <%= f.text_field :win_lose %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

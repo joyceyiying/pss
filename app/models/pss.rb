@@ -1,0 +1,2 @@
+class Pss < ApplicationRecord
+end

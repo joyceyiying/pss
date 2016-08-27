@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Computer:</strong>
+  <%= @pss.computer %>
+</p>
+
+<p>
+  <strong>Player:</strong>
+  <%= @pss.player %>
+</p>
+
+<p>
+  <strong>Win lose:</strong>
+  <%= @pss.win_lose %>
+</p>
+
+<%= link_to 'Edit', edit_pss_path(@pss) %> |
+<%= link_to 'Back', psses_path %>
